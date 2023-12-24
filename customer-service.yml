@@ -6,8 +6,8 @@ spring:
       matching-strategy: ant_path_matcher
   datasource:
     url: ${JDBC_DATABASE_URL:jdbc:mysql://localhost:3306/customerdb?serverTimezone=UTC}
-    username: ${JDBC_DATABASE_USERNAME:bensadik}
-    password: ${JDBC_DATABASE_PASSWORD:asexbs}
+    username: ${JDBC_DATABASE_USERNAME:}
+    password: ${JDBC_DATABASE_PASSWORD:}
   jpa:
     hibernate:
       ddl-auto: update
@@ -25,7 +25,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka
+      defaultZone: http://localhost:8081/eureka
   instance:
     hostname: localhost
     prefer-ip-address: true
